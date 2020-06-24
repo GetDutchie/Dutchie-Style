@@ -1,17 +1,17 @@
 ![Dutchie](https://cl.ly/360R2A3q1D31/icon.png)
 
-# Dutchie (Project Template)
-
-## Status
+# Dutchie-Style
 
 ## About This Repo
 
-This is a base repo that all new repos can be based off with some sane defaults.
+This repo contains all shared linter configs and style guides used by dutchie engineering.
+
+It is available as a rubygem as well as an NPM package.
+
+[Join Us! We're Hiring!](https://dutchie.com/careers)
 
 Includes:
 
-* Readme
-* GitHub Pull Request Template
-* Gitignore
-* Editor Config
-* [LicenseFinder config](https://github.com/pivotal/LicenseFinder)
+* RuboCop Config
+* Eslint Config
+* Prettier Config
