@@ -25,6 +25,8 @@ yarn-error.log
 # Emacs droppings
 *~
 
+*.gem
+
 # Mac OS noise
 .DS_Store
 
