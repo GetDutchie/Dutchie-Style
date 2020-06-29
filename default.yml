@@ -212,6 +212,8 @@ Lint/AssignmentInCondition:
 Lint/NumberConversion:
   Enabled: false
 
-# This is just silly. Calling the argument `other` in all cases makes no sense.
 Naming/BinaryOperatorParameterName:
+  Enabled: false
+
+Lint/ConstantResolution:
   Enabled: false
