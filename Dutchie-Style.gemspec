@@ -6,6 +6,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Christopher Ostrowski"]
   spec.email         = ["chris@dutchie.com"]
 
+  spec.license = 'MIT'
+
   spec.summary       = %q{Rubocop Settings for all dutchie Ruby Apps}
   spec.description   = %q{Rubocop Settings for all dutchie Ruby Apps}
   spec.homepage      = "https://github.com/GetDutchie/Dutchie-Style"
