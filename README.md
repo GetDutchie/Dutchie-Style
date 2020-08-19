@@ -13,5 +13,6 @@ It is available as a rubygem as well as an NPM package.
 Includes:
 
 * RuboCop Config
+* RuboCop Rspec Config
 * Eslint Config
 * Prettier Config
