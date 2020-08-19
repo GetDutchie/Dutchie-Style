@@ -8,7 +8,6 @@ AllCops:
     - 'vendor/**/*'
     - 'config/**/*'
     - 'docs/**/*'
-    - 'spec/**/*'
     - 'app/channels/**/*'
     - 'script/**/*'
     - 'lib/assets/**/*'
