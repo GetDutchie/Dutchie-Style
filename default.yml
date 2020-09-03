@@ -1,5 +1,6 @@
 require:
   - rubocop-rspec
+  - rubocop-rails
 
 AllCops:
   TargetRubyVersion: 2.6
@@ -219,3 +220,13 @@ Naming/BinaryOperatorParameterName:
 
 Lint/ConstantResolution:
   Enabled: false
+
+
+# Rails
+Rails/SaveBang:
+  Enabled: false
+
+Rails/FindBy:
+  Enabled: true
+  Include:
+    - app/**/*.rb
