@@ -35,6 +35,11 @@ Layout/HashAlignment:
 Layout/MultilineOperationIndentation:
   Enabled: false
 
+# https://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Lint/Debugger
+# Show linting errors on debugger/binding.pry even in development
+Lint/Debugger:
+  Enabled: true
+
 # Suppressing exceptions can be perfectly fine, and be it to avoid to
 # explicitly type nil into the rescue since that's what you want to return,
 # or suppressing LoadError for optional dependencies
@@ -108,11 +113,11 @@ Style/HashEachMethods:
 
 # https://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Style/HashTransformKeys
 Style/HashTransformKeys:
-  Enabled: true
+  Enabled: false
 
 # https://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Style/HashTransformValues
 Style/HashTransformValues:
-  Enabled: true
+  Enabled: false
 
 # has_key? and has_value? are far more readable than key? and value?
 Style/PreferredHashMethods:
