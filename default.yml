@@ -46,16 +46,14 @@ Layout/MultilineOperationIndentation:
 Lint/SuppressedException:
   Enabled: false
 
-Layout/SpaceInsideBlockBraces:
-  # The space here provides no real gain in readability while consuming
-  # horizontal space that could be used for a better parameter name.
-  # Also {| differentiates better from a hash than { | does.
-  SpaceBeforeBlockParameters: false
-
 # No trailing space differentiates better from the block:
 # foo} means hash, foo } means block.
 Layout/SpaceInsideHashLiteralBraces:
   EnforcedStyle: no_space
+
+# Exclude RSpec
+Metrics/BlockLength:
+  ExcludedMethods: ['describe', 'context']
 
 # Too short methods lead to extraction of single-use methods, which can make
 # the code easier to read (by naming things), but can also clutter the class
@@ -203,10 +201,10 @@ Style/MethodDefParentheses:
 Lint/ShadowingOuterLocalVariable:
   Enabled: false
 
-# There are valid cases, for example debugging Cucumber steps,
-# also they'll fail CI anyway
+# https://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Lint/Debugger
+# Show linting errors on debugger/binding.pry even in development
 Lint/Debugger:
-  Enabled: false
+  Enabled: true
 
 Lint/AssignmentInCondition:
   AllowSafeAssignment: false
@@ -230,3 +228,10 @@ Rails/FindBy:
   Enabled: true
   Include:
     - app/**/*.rb
+
+# RSpec
+RSpec/AlignLeftLetBrace:
+  Enabled: true
+
+RSpec/AlignRightLetBrace:
+  Enabled: false
