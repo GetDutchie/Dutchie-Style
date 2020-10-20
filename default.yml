@@ -46,6 +46,12 @@ Layout/MultilineOperationIndentation:
 Lint/SuppressedException:
   Enabled: false
 
+Layout/SpaceInsideBlockBraces:
+  # The space here provides no real gain in readability while consuming
+  # horizontal space that could be used for a better parameter name.
+  # Also {| differentiates better from a hash than { | does.
+  SpaceBeforeBlockParameters: false
+
 # No trailing space differentiates better from the block:
 # foo} means hash, foo } means block.
 Layout/SpaceInsideHashLiteralBraces:
@@ -101,12 +107,15 @@ Style/StringLiterals:
 Style/HashSyntax:
   EnforcedStyle: ruby19_no_mixed_keys
 
+# https://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Style/HashEachMethods
 Style/HashEachMethods:
-  Enabled: false
+  Enabled: true
 
+# https://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Style/HashTransformKeys
 Style/HashTransformKeys:
   Enabled: false
 
+# https://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Style/HashTransformValues
 Style/HashTransformValues:
   Enabled: false
 
