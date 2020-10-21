@@ -35,11 +35,6 @@ Layout/HashAlignment:
 Layout/MultilineOperationIndentation:
   Enabled: false
 
-# https://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Lint/Debugger
-# Show linting errors on debugger/binding.pry even in development
-Lint/Debugger:
-  Enabled: true
-
 # Suppressing exceptions can be perfectly fine, and be it to avoid to
 # explicitly type nil into the rescue since that's what you want to return,
 # or suppressing LoadError for optional dependencies
