@@ -228,8 +228,11 @@ Lint/ConstantResolution:
 Rails/SaveBang:
   Enabled: false
 
+# Temporarily removing until Mongoid is no more...
+# Mongoid #find_by raises an exception if it can't be found, unlike AR #find_by, so .where().first is preferred
+# Rubocop can't tell the difference between the two
 Rails/FindBy:
-  Enabled: true
+  Enabled: false
   Include:
     - app/**/*.rb
 
