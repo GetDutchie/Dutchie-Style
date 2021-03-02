@@ -21,6 +21,10 @@ AllCops:
     - '*.yml'
     - '.pryrc'
 
+# https://docs.rubocop.org/rubocop/1.10/cops_layout.html#layoutclassstructure
+Layout/ClassStructure:
+  Enabled: true
+
 # Commonly used screens these days easily fit more than 80 characters.
 Layout/LineLength:
   Max: 120
