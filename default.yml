@@ -138,6 +138,8 @@ Style/FormatString:
 Style/CollectionMethods:
   Enabled: true
   PreferredMethods:
+    # find is not equivalent on mongoid embeds or collections
+    find: "detect"
     # inject seems more common in the community.
     reduce: "inject"
 
