@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    Dutchie-Style (1.0.8)
+    Dutchie-Style (1.0.9)
       rubocop (~> 0.93.1)
       rubocop-rails
       rubocop-rspec
