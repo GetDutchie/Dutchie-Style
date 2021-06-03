@@ -70,9 +70,9 @@ Metrics/BlockLength:
 Metrics/MethodLength:
   Max: 20
 
-# The guiding principle of classes is SRP, SRP can't be accurately measured by LoC
+# SRP classes should fit in 400 lines. Use inline disable comments in god models.
 Metrics/ClassLength:
-  Max: 1500
+  Max: 400
 
 # Check with yard instead.
 Style/DocumentationMethod:
