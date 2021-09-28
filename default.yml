@@ -63,6 +63,8 @@ Layout/SpaceInsideHashLiteralBraces:
 
 # Exclude RSpec
 Metrics/BlockLength:
+  Exclude:
+    - "spec/factories/**/*.rb"
   ExcludedMethods: ['describe', 'context']
 
 # Too short methods lead to extraction of single-use methods, which can make
