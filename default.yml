@@ -25,9 +25,16 @@ AllCops:
 Layout/ClassStructure:
   Enabled: true
 
-# Commonly used screens these days easily fit more than 80 characters.
+# Line length is limited by how much horizontality a person can fit into their view angle without
+# needing to move their eyes to the sides. This naturally depends on font size used.
+# Experimentally, at font size 16 it's 80 symbols, and size 12 it's 100 symbols.
+# The ideal is somewhere in the middle.
 Layout/LineLength:
-  Max: 120
+  Max: 95
+  AllowURI: true
+  URISchemes:
+    - http
+    - https
 
 # No space makes the method definition shorter and differentiates
 # from a regular assignment.
