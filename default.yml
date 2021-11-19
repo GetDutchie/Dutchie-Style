@@ -36,7 +36,7 @@ Layout/ClassStructure:
 # Commonly used screens these days easily fit more than 80 characters.
 # Ignores long lines with Heredocs or URIs in them
 Layout/LineLength:
-  Enabled: true
+  Max: 120
   AllowHeredoc: true
   # There's a bug which considers commas after a URI too long so we can't use built-in AllowURI setting.
   # Pattern matches valid URI encapsulated within a string literal.
