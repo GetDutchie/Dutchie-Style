@@ -21,13 +21,27 @@ AllCops:
     - '*.yml'
     - '.pryrc'
 
+
+# Capybara cops
+
+# Allows us to use scenario/feature instead of it/describes
+Capybara/FeatureMethods:
+  Enabled: true
+  EnabledMethods: ['feature', 'scenario']
+
 # https://docs.rubocop.org/rubocop/1.10/cops_layout.html#layoutclassstructure
 Layout/ClassStructure:
   Enabled: true
 
 # Commonly used screens these days easily fit more than 80 characters.
+# Ignores long lines with Heredocs or URIs in them
 Layout/LineLength:
-  Max: 120
+  Enabled: true
+  AllowHeredoc: true
+  # There's a bug which considers commas after a URI too long so we can't use built-in AllowURI setting.
+  # Pattern matches valid URI encapsulated within a string literal.
+  IgnoredPatterns: ['["\u0027].*https?[\w\:\/\$\–\-\#\.\+\!\*\‘\(\)\,]*.*["\u0027]']
+
 
 # No space makes the method definition shorter and differentiates
 # from a regular assignment.
@@ -205,6 +219,10 @@ Style/SingleLineBlockParams:
 Style/MethodDefParentheses:
   Enabled: false
 
+# Ignores requirement to add underscore to separate every 3 digits in a number
+Style/NumericLiterals:
+  Enabled: false
+
 # Shadowing outer local variables with block parameters is often useful
 # to not reinvent a new name for the same thing, it highlights the relation
 # between the outer variable and the parameter. The cases where it's actually
@@ -245,6 +263,11 @@ Rails/FindBy:
     - app/**/*.rb
 
 # RSpec
+
+# Start context description without 'when', 'with', or 'without'.
+RSpec/ContextWording:
+  Enabled: false
+
 RSpec/AlignLeftLetBrace:
   Enabled: true
 
@@ -252,7 +275,11 @@ RSpec/AlignRightLetBrace:
   Enabled: false
 
 RSpec/MultipleMemoizedHelpers:
-  Max: 10
+  Enabled: false
 
 RSpec/NestedGroups:
   Max: 5
+
+# Allows us to mark specs as "skip"
+RSpec/Pending:
+  Enabled: false
