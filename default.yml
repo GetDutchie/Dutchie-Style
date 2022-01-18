@@ -13,6 +13,8 @@ AllCops:
     - 'config/**/*'
     - 'docs/**/*'
     - 'app/channels/**/*'
+    - 'spec/dummy/config/**/*'
+    - 'spec/dummy/bin/**/*'
     - 'script/**/*'
     - 'lib/assets/**/*'
     - 'Rakefile'
