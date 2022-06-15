@@ -40,7 +40,7 @@ Layout/LineLength:
   AllowHeredoc: true
   # There's a bug which considers commas after a URI too long so we can't use built-in AllowURI setting.
   # Pattern matches valid URI encapsulated within a string literal.
-  IgnoredPatterns: ['["\u0027].*https?[\w\:\/\$\–\-\#\.\+\!\*\‘\(\)\,]*.*["\u0027]']
+  AllowedPatterns: ['["\u0027].*https?[\w\:\/\$\–\-\#\.\+\!\*\‘\(\)\,]*.*["\u0027]']
 
 
 # No space makes the method definition shorter and differentiates
@@ -79,7 +79,7 @@ Layout/SpaceInsideHashLiteralBraces:
 Metrics/BlockLength:
   Exclude:
     - "spec/factories/**/*.rb"
-  ExcludedMethods: ['describe', 'context']
+  IgnoredMethods: ['describe', 'context']
 
 # Too short methods lead to extraction of single-use methods, which can make
 # the code easier to read (by naming things), but can also clutter the class
@@ -175,7 +175,7 @@ Style/MethodCallWithArgsParentheses:
   VersionChanged: '0.61'
   IgnoreMacros: true
   IgnoredMethods: []
-  IgnoredPatterns: []
+  AllowedPatterns: []
   IncludedMacros: []
   AllowParenthesesInMultilineCall: false
   AllowParenthesesInChaining: false
