@@ -25,7 +25,7 @@ AllCops:
 # Capybara cops
 
 # Allows us to use scenario/feature instead of it/describes
-Capybara/FeatureMethods:
+RSpec/Capybara:
   Enabled: true
   EnabledMethods: ['feature', 'scenario']
 
