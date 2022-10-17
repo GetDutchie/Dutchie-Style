@@ -263,6 +263,9 @@ Rails/FindBy:
   Include:
     - app/**/*.rb
 
+Rails/Pluck:
+  Enabled: false
+
 # RSpec
 
 # Start context description without 'when', 'with', or 'without'.
