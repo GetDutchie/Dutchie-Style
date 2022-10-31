@@ -263,7 +263,10 @@ Rails/FindBy:
   Include:
     - app/**/*.rb
 
-Rails/Pluck:
+Rails/PluckId:
+  Enabled: false
+
+Rails/PluckInWhere:
   Enabled: false
 
 # RSpec
