@@ -269,6 +269,9 @@ Rails/PluckId:
 Rails/PluckInWhere:
   Enabled: false
 
+Rails/WhereExists:
+  Enabled: false
+
 # RSpec
 
 # Start context description without 'when', 'with', or 'without'.
