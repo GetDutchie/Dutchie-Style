@@ -2,7 +2,7 @@ PATH
   remote: .
   specs:
     Dutchie-Style (2.0.7)
-      rubocop (~> 1.56.2)
+      rubocop (~> 1.56)
       rubocop-rails
       rubocop-rspec
 
@@ -84,8 +84,8 @@ DEPENDENCIES
   Dutchie-Style!
   rake (~> 12.0)
   rspec (~> 3.0)
-  rubocop (~> 1.56.2)
-  rubocop-rails (~> 2.14.2)
+  rubocop (~> 1.56)
+  rubocop-rails (~> 2.14)
 
 BUNDLED WITH
    2.4.8
