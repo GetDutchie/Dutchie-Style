@@ -5,5 +5,5 @@ gemspec
 
 gem "rake", "~> 12.0"
 gem "rspec", "~> 3.0"
-gem "rubocop", "~> 1.30.1"
-gem "rubocop-rails", "~> 2.14.2"
+gem "rubocop", "~> 1.56"
+gem "rubocop-rails", "~> 2.14"
