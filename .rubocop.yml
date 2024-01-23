@@ -3,7 +3,7 @@ require:
   - rubocop-rails
 
 AllCops:
-  TargetRubyVersion: 2.6
+  TargetRubyVersion: 3.1.4
   EnabledByDefault: true
   DisplayCopNames: true
   Exclude:
@@ -20,7 +20,6 @@ AllCops:
     - 'Guardfile'
     - '*.yml'
     - '.pryrc'
-
 
 # Capybara cops
 
@@ -80,7 +79,7 @@ Layout/SpaceInsideHashLiteralBraces:
 Metrics/BlockLength:
   Exclude:
     - "spec/factories/**/*.rb"
-  IgnoredMethods: ['describe', 'context']
+  AllowedMethods: ['describe', 'context']
 
 # Too short methods lead to extraction of single-use methods, which can make
 # the code easier to read (by naming things), but can also clutter the class
@@ -175,7 +174,7 @@ Style/MethodCallWithArgsParentheses:
   VersionAdded: '0.47'
   VersionChanged: '0.61'
   IgnoreMacros: true
-  IgnoredMethods: []
+  AllowedMethods: []
   AllowedPatterns: []
   IncludedMacros: []
   AllowParenthesesInMultilineCall: false
@@ -190,7 +189,7 @@ Style/MethodCallWithoutArgsParentheses:
   Description: 'Do not use parentheses for method calls with no arguments.'
   StyleGuide: '#method-invocation-parens'
   Enabled: true
-  IgnoredMethods: []
+  AllowedMethods: []
   VersionAdded: '0.47'
   VersionChanged: '0.55'
 
