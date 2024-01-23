@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require "Dutchie/Style/version"
 
 module Dutchie
