@@ -262,6 +262,10 @@ Rails/FindBy:
   Include:
     - app/**/*.rb
 
+# not a method in mongoid
+Rails/FindEach:
+  Enabled: false
+
 Rails/PluckId:
   Enabled: false
 
