@@ -2,7 +2,7 @@
 
 module Dutchie
   module Style
-    VERSION = "2.0.9"
+    VERSION = "2.0.10"
     public_constant :VERSION
   end
 end
