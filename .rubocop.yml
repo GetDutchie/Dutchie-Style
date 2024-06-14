@@ -211,6 +211,12 @@ Style/SignalException:
 Style/MethodCalledOnDoEndBlock:
   Enabled: true
 
+  
+# OpenStruct shouldn't be used anymore due to performance
+# degradation on ruby 3.2+
+Style/OpenStructUse:
+  Enabled: true
+
 # Enforcing the names of variables? To single letter ones? Just no.
 Style/SingleLineBlockParams:
   Enabled: false
