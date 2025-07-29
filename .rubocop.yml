@@ -1,6 +1,7 @@
-require:
+plugins:
   - rubocop-rspec
   - rubocop-rails
+  - rubocop-capybara
 
 AllCops:
   TargetRubyVersion: 3.1.4
@@ -21,10 +22,10 @@ AllCops:
     - '*.yml'
     - '.pryrc'
 
-# Capybara cops
+# Capybara/RSpec cops
 
 # Allows us to use scenario/feature instead of it/describes
-RSpec/Capybara/FeatureMethods:
+RSpec/Dialect:
   Enabled: true
   EnabledMethods: ['feature', 'scenario']
 
