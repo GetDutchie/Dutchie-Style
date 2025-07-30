@@ -27,7 +27,7 @@ AllCops:
 # Allows us to use scenario/feature instead of it/describes
 RSpec/Dialect:
   Enabled: true
-  EnabledMethods: ['feature', 'scenario']
+  PreferredMethods: ['feature', 'scenario']
 
 # https://docs.rubocop.org/rubocop/1.10/cops_layout.html#layoutclassstructure
 Layout/ClassStructure:
