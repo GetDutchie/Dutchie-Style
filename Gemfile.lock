@@ -7,6 +7,7 @@ PATH
       rubocop-factory_bot (~> 2.24)
       rubocop-rails (~> 2.21)
       rubocop-rspec (~> 2.24)
+      rubocop-rspec_rails (~> 2.25)
 
 GEM
   remote: https://rubygems.org/
