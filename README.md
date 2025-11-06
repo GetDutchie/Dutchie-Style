@@ -8,6 +8,8 @@ This repo contains all shared linter configs and style guides used by dutchie en
 
 It is available as a rubygem as well as an NPM package.
 
+To run rubocop on the project using the current style guide: `bundle exec rubocop -c config/default.yml`.
+
 [Join Us! We're Hiring!](https://dutchie.com/careers)
 
 Includes:
