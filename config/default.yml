@@ -301,3 +301,22 @@ RSpec/NestedGroups:
 # Allows us to mark specs as "skip"
 RSpec/Pending:
   Enabled: false
+
+# Dutchie Custom Cops
+
+# Ensures all LaunchDarkly feature flag calls have default values
+# Supports both Armageddon (DutchieFeatureFlags) and MenuConnector (ld_client.variation) patterns
+Dutchie/LaunchDarklyDefaults:
+  Enabled: true
+  Severity: warning
+  AutoCorrect: true
+
+# Flags questionable usage of safety_assured in migrations
+# The Include directive overrides the global Exclude: db/**/* for this cop only
+Dutchie/MigrationSafetyAssured:
+  Enabled: true
+  Severity: warning
+  Include:
+    - 'db/migrate/**/*.rb'
+    - 'lib/migration_helpers.rb'
+    - 'lib/**/migration_helpers.rb'

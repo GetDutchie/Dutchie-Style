@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    Dutchie-Style (2.0.11)
+    Dutchie-Style (2.1.0)
       rubocop (~> 1.72)
       rubocop-capybara (~> 2.18)
       rubocop-factory_bot (~> 2.24)
