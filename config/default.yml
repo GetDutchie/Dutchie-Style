@@ -280,6 +280,10 @@ Rails/PluckId:
 Rails/PluckInWhere:
   Enabled: false
 
+# Disable I18n locale texts cop
+Rails/I18nLocaleTexts:
+  Enabled: false
+
 # RSpec
 
 # Start context description without 'when', 'with', or 'without'.
