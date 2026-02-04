@@ -13,7 +13,7 @@ Gem::Specification.new do |spec|
   spec.summary       = "Rubocop Settings for all dutchie Ruby Apps"
   spec.description   = "Rubocop Settings for all dutchie Ruby Apps"
   spec.homepage      = "https://github.com/GetDutchie/Dutchie-Style"
-  spec.required_ruby_version = Gem::Requirement.new(">= 3.1.4")
+  spec.required_ruby_version = Gem::Requirement.new(">= 3.0.6")
 
   spec.metadata["homepage_uri"] = spec.homepage
   spec.metadata["source_code_uri"] = "https://github.com/GetDutchie/Dutchie-Style"
