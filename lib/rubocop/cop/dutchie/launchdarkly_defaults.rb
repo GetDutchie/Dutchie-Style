@@ -193,7 +193,8 @@ module RuboCop
           return unless flag_key
 
           # on? accepts default: as keyword or as second positional argument
-          return if args.any? || has_default_kwarg?(args)
+          # Return if there's a positional default (non-hash arg) or default: kwarg
+          return if has_positional_default?(args) || has_default_kwarg?(args)
 
           add_offense(node, message: MSG_ON) do |corrector|
             insert_default_kwarg(corrector, flag_key, args)
@@ -205,7 +206,8 @@ module RuboCop
           return unless flag_key
 
           # off? accepts default: as keyword or as second positional argument
-          return if args.any? || has_default_kwarg?(args)
+          # Return if there's a positional default (non-hash arg) or default: kwarg
+          return if has_positional_default?(args) || has_default_kwarg?(args)
 
           add_offense(node, message: MSG_OFF) do |corrector|
             insert_default_kwarg(corrector, flag_key, args)
@@ -261,6 +263,10 @@ module RuboCop
               pair.key.sym_type? && pair.key.value == :default
             end
           end
+        end
+
+        def has_positional_default?(args)
+          args.any? { |arg| !arg.hash_type? }
         end
 
         def insert_default_kwarg(corrector, flag_key, args)
