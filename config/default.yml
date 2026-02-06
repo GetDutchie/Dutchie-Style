@@ -78,7 +78,7 @@ Layout/SpaceInsideHashLiteralBraces:
   EnforcedStyle: no_space
 
 Metrics/AbcSize:
-  Max: 30
+  Max: 25
 
 # Exclude RSpec
 Metrics/BlockLength:
@@ -91,7 +91,7 @@ Metrics/ClassLength:
   Max: 1500
 
 Metrics/CyclomaticComplexity:
-  Max: 15
+  Max: 12
 
 # Too short methods lead to extraction of single-use methods, which can make
 # the code easier to read (by naming things), but can also clutter the class
