@@ -299,9 +299,6 @@ RSpec/ContextWording:
 RSpec/ExampleLength:
   Max: 20
 
-RSpec/MultipleExpectations:
-  Enabled: false
-
 RSpec/AlignLeftLetBrace:
   Enabled: true
 
