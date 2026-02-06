@@ -77,20 +77,26 @@ Layout/SpaceInsideBlockBraces:
 Layout/SpaceInsideHashLiteralBraces:
   EnforcedStyle: no_space
 
+Metrics/AbcSize:
+  Max: 25
+
 # Exclude RSpec
 Metrics/BlockLength:
   Exclude:
     - "spec/factories/**/*.rb"
   AllowedMethods: ['describe', 'context']
 
-# Too short methods lead to extraction of single-use methods, which can make
-# the code easier to read (by naming things), but can also clutter the class
-Metrics/MethodLength:
-  Max: 20
-
 # The guiding principle of classes is SRP, SRP can't be accurately measured by LoC
 Metrics/ClassLength:
   Max: 1500
+
+Metrics/CyclomaticComplexity:
+  Max: 12
+
+# Too short methods lead to extraction of single-use methods, which can make
+# the code easier to read (by naming things), but can also clutter the class
+Metrics/MethodLength:
+  Max: 40
 
 # Check with yard instead.
 Style/DocumentationMethod:
@@ -289,6 +295,9 @@ Rails/I18nLocaleTexts:
 # Start context description without 'when', 'with', or 'without'.
 RSpec/ContextWording:
   Enabled: false
+
+RSpec/ExampleLength:
+  Max: 20
 
 RSpec/AlignLeftLetBrace:
   Enabled: true
