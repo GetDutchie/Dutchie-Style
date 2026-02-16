@@ -144,7 +144,7 @@ module RuboCop
         # Armageddon pattern checks
 
         def check_flag_method(node)
-          flag_key, *args = dutchie_flag_call?(node)
+          flag_key, args = dutchie_flag_call?(node)
           return unless flag_key
 
           # Need at least one more argument after the key (the default value)
@@ -156,7 +156,7 @@ module RuboCop
         end
 
         def check_context_flag_method(node)
-          flag_key, *args = context_flag_call?(node)
+          flag_key, args = context_flag_call?(node)
           return unless flag_key
 
           return if has_default_kwarg?(args)
@@ -167,7 +167,7 @@ module RuboCop
         end
 
         def check_dispensary_flag_method(node)
-          flag_key, *args = dispensary_flag_call?(node)
+          flag_key, args = dispensary_flag_call?(node)
           return unless flag_key
 
           return if has_default_kwarg?(args)
@@ -178,7 +178,7 @@ module RuboCop
         end
 
         def check_enterprise_flag_method(node)
-          flag_key, *args = enterprise_flag_call?(node)
+          flag_key, args = enterprise_flag_call?(node)
           return unless flag_key
 
           return if has_default_kwarg?(args)
@@ -189,7 +189,7 @@ module RuboCop
         end
 
         def check_on_method(node)
-          flag_key, *args = on_call?(node)
+          flag_key, args = on_call?(node)
           return unless flag_key
 
           # on? accepts default: as keyword or as second positional argument
@@ -202,7 +202,7 @@ module RuboCop
         end
 
         def check_off_method(node)
-          flag_key, *args = off_call?(node)
+          flag_key, args = off_call?(node)
           return unless flag_key
 
           # off? accepts default: as keyword or as second positional argument
@@ -217,7 +217,7 @@ module RuboCop
         # MenuConnector pattern checks
 
         def check_variation_method(node)
-          flag_key, *args = variation_call?(node)
+          flag_key, args = variation_call?(node)
           return unless flag_key
 
           # variation(flag, context, default) - need at least 2 args after flag
@@ -238,7 +238,7 @@ module RuboCop
           # Don't check mock variation calls in test code
           return if in_test_file?(node)
 
-          flag_key, *args = mock_variation_call?(node)
+          flag_key, args = mock_variation_call?(node)
           return unless flag_key
 
           # Same logic as regular variation
