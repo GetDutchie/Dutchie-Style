@@ -30,3 +30,4 @@ yarn-error.log
 
 # SimpleCov output dir
 coverage
+.claude
