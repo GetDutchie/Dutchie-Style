@@ -324,3 +324,14 @@ Dutchie/MigrationSafetyAssured:
     - 'db/migrate/**/*.rb'
     - 'lib/migration_helpers.rb'
     - 'lib/**/migration_helpers.rb'
+
+# Flags write calls not wrapped in connected_to(role: :writing) in files known
+# to contain code reachable from GET requests, which are routed to a read
+# replica by ActiveRecord::Middleware::DatabaseSelector.
+Dutchie/RequireWritingConnection:
+  Enabled: true
+  Severity: warning
+  Include:
+    - 'app/services/**/queries/**/*.rb'
+    - 'app/models/plus_api_key.rb'
+    - 'app/models/plus_enterprise_api_key.rb'
