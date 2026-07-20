@@ -1,8 +1,9 @@
-require:
+plugins:
   - rubocop-rspec
   - rubocop-rspec_rails
   - rubocop-rails
   - rubocop-capybara
+  - rubocop-factory_bot
 
 AllCops:
   TargetRubyVersion: 3.1.4
