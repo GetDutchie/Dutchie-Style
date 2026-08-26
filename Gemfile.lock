@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    Dutchie-Style (3.0.0)
+    Dutchie-Style (3.0.1)
       rubocop (~> 1.81)
       rubocop-capybara (~> 3.0)
       rubocop-factory_bot (~> 2.28)
@@ -41,7 +41,7 @@ GEM
     minitest (6.0.6)
       drb (~> 2.0)
       prism (~> 1.5)
-    parallel (2.1.0)
+    parallel (1.28.0)
     parser (3.3.12.0)
       ast (~> 2.4.1)
       racc
@@ -118,4 +118,4 @@ DEPENDENCIES
   rubocop-rails (~> 2.32)
 
 BUNDLED WITH
-   2.4.8
+   2.6.2
