@@ -29,10 +29,13 @@ AllCops:
 
 # Capybara/RSpec cops
 
-# Allows us to use scenario/feature instead of it/describes
+# Allows us to use scenario/feature instead of it/describes.
+# PreferredMethods must be a Hash (dialect method => preferred method) for
+# RSpec/Dialect; it crashes if given an Array. Since the intent here is to
+# permit the feature/scenario dialect rather than enforce describe/it, the
+# correct config is simply disabling the cop.
 RSpec/Dialect:
-  Enabled: true
-  PreferredMethods: ['feature', 'scenario']
+  Enabled: false
 
 # https://docs.rubocop.org/rubocop/1.10/cops_layout.html#layoutclassstructure
 Layout/ClassStructure:
